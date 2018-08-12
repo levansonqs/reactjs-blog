@@ -10,13 +10,22 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 
-const Layout = (props) =>(
-    <React.Fragment>
-        <Head>
-            <title>{props.title}</title>
-        </Head>
-        {props.children}
-    </React.Fragment>
-)
+class Layout extends React.Component {
+    constructor(props){
+        super(props)
+
+    }
+    render() {
+        const {title,children} =this.props
+        return (
+            <React.Fragment>
+                <Head>
+                    <title>{title}</title>
+                </Head>
+                {children}
+            </React.Fragment>
+        )
+    }
+}
 
 export default Layout

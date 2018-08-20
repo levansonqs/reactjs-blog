@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from '@material-ui/core/styles';
+import Link from 'next/link'
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -118,9 +118,8 @@ class PersistentDrawer extends React.Component {
     };
 
     render() {
-        const {classes, theme, children} = this.props;
-        const {anchor, open, auth} = this.state;
-
+        const {classes, theme, children, store} = this.props;
+        const {anchor, open,} = this.state;
         const drawer = (
             <Drawer
                 variant="persistent"
@@ -169,12 +168,12 @@ class PersistentDrawer extends React.Component {
                             >
                                 <MenuIcon/>
                             </IconButton>
-                            <Typography variant="title" color="inherit" noWrap className={classes.flex}>
-                                Persistent drawer
-                            </Typography>
-                            <NavBarRight
-                                auth={auth}
-                            />
+                            <Link href="/">
+                                <Typography variant="title" color="inherit" noWrap className={classes.flex}>
+                                    Laravel Reactjs
+                                </Typography>
+                            </Link>
+                            <NavBarRight/>
                         </Toolbar>
                     </AppBar>
                     {before}
@@ -193,10 +192,5 @@ class PersistentDrawer extends React.Component {
         );
     }
 }
-
-PersistentDrawer.propTypes = {
-    classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles, {withTheme: true})(PersistentDrawer);

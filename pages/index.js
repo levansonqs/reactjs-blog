@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Layout from "../components/Layout";
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
 import WapperContent from '../components/WapperContent'
 import HomeContent from '../components/HomeContent'
 
 class Index extends React.Component {
+static  getInitialProps (ctx) {
+        console.log('client side')
 
+    }
     render() {
         return (
             <Layout title='Home | Laravel reactjs'>
@@ -19,11 +20,5 @@ class Index extends React.Component {
         );
     }
 }
-
-Index.propTypes = {
-    // classes: PropTypes.object.isRequired,
-    // theme: PropTypes.object.isRequired,
-};
-
 
 export default Index;

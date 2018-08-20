@@ -28,7 +28,7 @@ class MyDocument extends Document {
                 />
                 <link
                     rel="stylesheet"
-                    href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
+                    href="/static/nprogress.css"
                 />
             </Head>
             <body>

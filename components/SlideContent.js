@@ -9,19 +9,18 @@ import Avatar from '@material-ui/core/Avatar';
 import ImageIcon from '@material-ui/icons/Image';
 import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
-import Divider from "@material-ui/core/Divider";
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
-    root: {
-        width: '100%',
-        backgroundColor: theme.palette.background.paper,
-    },
+    paper: {
+        padding: theme.spacing.unit * 2,
+    }
 });
 
 function FolderList(props) {
     const { classes,title } = props;
     return (
-        <div className={classes.root}>
+        <Paper className={classes.root}>
             <List
                 component="nav"
                 subheader={<ListSubheader component="div"><h2>{title}</h2></ListSubheader>}
@@ -45,7 +44,7 @@ function FolderList(props) {
                     <ListItemText primary="Vacation" secondary="July 20, 2014" />
                 </ListItem>
             </List>
-        </div>
+        </Paper>
     );
 }
 

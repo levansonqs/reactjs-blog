@@ -26,18 +26,18 @@ function HomeContent(props) {
                     />
                 </Grid>
                 <Grid item sm={4} xs={12}>
-                    <SlideContent
-                        title={'Search in here'}
-                    />
+                    {/*<SlideContent*/}
+                        {/*title={'Search in here'}*/}
+                    {/*/>*/}
                     <SlideContent
                         title={'Category'}
                     />
-                    <SlideContent
-                        title={'Lastest Post'}
-                    />
-                    <SlideContent
-                        title={'Most View Post'}
-                    />
+                    {/*<SlideContent*/}
+                        {/*title={'Lastest Post'}*/}
+                    {/*/>*/}
+                    {/*<SlideContent*/}
+                        {/*title={'Most View Post'}*/}
+                    {/*/>*/}
                     <SlideContent
                         title={'Popular Tag'}
                     />
